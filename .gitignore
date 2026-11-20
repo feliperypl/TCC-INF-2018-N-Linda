@@ -3,5 +3,6 @@
 Thumbs.db
 *.swp
 *.swo
+*.psd
 .vscode/
 .idea/

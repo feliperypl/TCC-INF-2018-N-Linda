@@ -10,133 +10,167 @@
 
   const CATEGORY_LABELS = {
     todos: 'Todos',
-    botas: 'Botas',
-    calcados: 'Calçados',
+    roupas: 'Roupas',
     bolsas: 'Bolsas',
+    calcados: 'Calçados',
     acessorios: 'Acessórios',
   };
 
   /**
-   * Coleções reais da loja Nô Linda (fotos do repositório original do TCC 2018)
+   * Coleções reais e atualizadas da loja Nô Linda (@noeliarypl_nolinda)
    */
   const PRODUCTS = [
     {
-      id: 'colecao-botas-bolsas',
-      title: 'Coturnos & Bolsas Estruturadas',
-      image: 'assets/images/produtos_1.jpg',
-      alt: 'Coturnos em camurça, cinza e preto ao lado de bolsas estruturadas em tons neutros e textura croco na loja Nô Linda',
-      categories: ['botas', 'bolsas'],
+      id: 'conjuntos-conforto-bolsas-tenis',
+      title: 'Conjuntos Conforto, Bolsas & Tênis',
+      image: 'assets/images/look_1.jpg',
+      alt: 'Conjuntos confortáveis em caramelo e azul acinzentado com bolsa estruturada branca, mochila nude, colar longo e tênis na Nô Linda',
+      categories: ['roupas', 'bolsas', 'calcados', 'acessorios'],
       shortDescription:
-        'Combinação versátil de coturnos tratorados em tons terrosos e escuros com bolsas estruturadas de acabamento marcante.',
+        'Conjuntos macios em tons caramelo e azul acinzentado combinados com bolsa estruturada branca, mochila nude e tênis confortáveis.',
       fullDescription:
-        'Destaque da nossa vitrine de inverno: coturnos confortáveis com amarração em camurça marrom, grafite e preto, acompanhados por bolsas amplas em textura croco e caramelo para compor produções elegantes no dia a dia.',
-      tags: ['Coturnos', 'Camurça', 'Textura Croco'],
+        'Produções descontraídas e cheias de estilo para o dia a dia: conjuntos coordenados em caramelo e azul suave, acompanhados por bolsa estruturada branca, mochila em tom nude, colar longo com pingente dourado de coração, tênis casual esportivo e slip-on verde menta.',
+      tags: ['Conjuntos', 'Bolsa Estruturada', 'Tênis Casuais'],
       highlights: [
-        'Modelos com salto bloco confortável para uso prolongado',
-        'Bolsas estruturadas com alça de ombro e ótimo espaço interno',
-        'Consulte numerações e cores disponíveis pelo WhatsApp',
+        'Conjuntos confortáveis com ótimo caimento para a rotina',
+        'Bolsa estruturada branca e mochila nude práticas para o dia a dia',
+        'Tênis casuais leves e colar longo para finalizar a produção',
       ],
     },
     {
-      id: 'vitrine-vermelho-verniz',
-      title: 'Vitrine Vermelho & Verniz',
-      image: 'assets/images/produtos_2.jpg',
-      alt: 'Vitrine com botas vermelhas em verniz, mocassins, oxfords pretos, bolsa vermelha e pulseiras na Nô Linda',
-      categories: ['calcados', 'bolsas', 'acessorios'],
+      id: 'vestido-acetinado-scarpin-matelasse',
+      title: 'Vestido Acetinado, Scarpin & Matelassê',
+      image: 'assets/images/look_2.jpg',
+      alt: 'Vestido midi acetinado champanhe com fenda lateral, bolsa branca matelassê com corrente dourada e scarpin slingback tricolor',
+      categories: ['roupas', 'bolsas', 'calcados'],
       shortDescription:
-        'Botas de cano curto, mocassins e oxfords em verniz com bolsas vermelhas e acessórios que iluminam qualquer produção.',
+        'Vestido midi acetinado champanhe com fenda lateral, bolsa branca matelassê com corrente dourada e scarpin slingback tricolor.',
       fullDescription:
-        'Uma seleção cheia de personalidade: botas e mocassins em verniz vermelho e preto, sapatos oxford de solado tratorado e bolsas coordenadas nos nichos rosa da Nô Linda, perfeitos para looks modernos.',
-      tags: ['Verniz', 'Mocassim & Oxford', 'Bolsas'],
+        'Elegância para celebrar momentos especiais: vestido midi em cetim champanhe com gola frente única e detalhe metálico dourado, combinado com bolsa tiracolo branca em matelassê com alça de corrente e scarpin slingback de bico fino em preto, branco e dourado.',
+      tags: ['Festa & Eventos', 'Scarpin Tricolor', 'Matelassê'],
       highlights: [
-        'Acabamento em verniz de alto brilho em vermelho e preto',
-        'Oxfords e mocassins estilosos para trabalho ou passeio',
-        'Bolsas tiracolo e pulseiras combinando na vitrine',
+        'Vestido midi acetinado com caimento fluido e fenda sofisticada',
+        'Bolsa branca matelassê com fecho e alça de corrente dourados',
+        'Scarpin slingback de bico fino com tiras delicadas no tornozelo',
       ],
     },
     {
-      id: 'botas-cano-curto-camurca',
-      title: 'Trio de Botas Cano Curto',
-      image: 'assets/images/produtos_3.jpg',
-      alt: 'Três botas femininas de cano curto em camurça marrom, caramelo e bege com franjas na Nô Linda',
-      categories: ['botas'],
+      id: 'looks-urbanos-bolsas-destaque',
+      title: 'Looks Urbanos com Bolsas de Destaque',
+      image: 'assets/images/look_3.jpg',
+      alt: 'Duas produções urbanas com bolsa hobo marrom, jeans e tricô mostarda ao lado de look preto e vermelho com bolsa matelassê vermelha',
+      categories: ['roupas', 'bolsas', 'calcados', 'acessorios'],
       shortDescription:
-        'Coturno dobrável com detalhe étnico e botas de salto bloco em camurça caramelo e bege com franjas.',
+        'Duas propostas urbanas versáteis: bolsa hobo marrom com jeans e tricô mostarda, e bolsa matelassê vermelha com look preto e vermelho.',
       fullDescription:
-        'Conforto e charme em três propostas diferentes: coturno marrom com cano dobrável estampado, bota caramelo de salto bloco em madeira e bota bege em camurça com franjas laterais e detalhe texturizado.',
-      tags: ['Cano Curto', 'Salto Bloco', 'Franjas'],
+        'Combinações práticas que valorizam cada detalhe: blusa gola alta mostarda, jeans reto, cinto caramelo, bolsa hobo marrom espaçosa e tênis caramelo; ao lado de blusa preta com brilho sutil, calça vermelha, bolsa matelassê vermelha com corrente e tênis preto.',
+      tags: ['Bolsa Hobo', 'Matelassê Vermelha', 'Casual Chic'],
       highlights: [
-        'Tons neutros fáceis de combinar com jeans, vestidos e tricôs',
-        'Salto bloco estável e zíper lateral prático',
-        'Acabamento macio em camurça de alta qualidade',
+        'Bolsa hobo marrom ampla e bolsa matelassê vermelha tiracolo',
+        'Calçados confortáveis em caramelo e preto para usar o dia todo',
+        'Cintos e colares coordenados para dar personalidade ao look',
       ],
     },
     {
-      id: 'scarpins-festas-acessorios',
-      title: 'Scarpins, Festas & Bijuterias',
-      image: 'assets/images/produtos_4.jpg',
-      alt: 'Scarpins em preto com tachas, rosé metalizado e vermelho verniz expostos com brincos e cintos na loja Nô Linda',
-      categories: ['calcados', 'acessorios'],
+      id: 'alfaiataria-vinho-baguete-monograma',
+      title: 'Alfaiataria Vinho & Baguete Monograma',
+      image: 'assets/images/look_4.jpg',
+      alt: 'Conjunto monocromático em alfaiataria vinho com calça pantalona, bolsa baguete monograma e rasteirinha caramelo',
+      categories: ['roupas', 'bolsas', 'calcados'],
       shortDescription:
-        'Scarpins de salto fino em preto com tachas, rosé metalizado e vermelho verniz, ao lado de brincos, pulseiras e cintos.',
+        'Conjunto monocromático em tom vinho com calça pantalona, acompanhado de bolsa baguete monograma e rasteirinha caramelo.',
       fullDescription:
-        'Para momentos especiais ou produções sofisticadas: scarpin preto estilo tiras com tachas douradas, scarpin rosé metalizado com brilho no tornozelo e clássico scarpin vermelho verniz, além de sapatilhas e acessórios delicados.',
-      tags: ['Scarpins', 'Festas', 'Brincos & Cintos'],
+        'Sofisticação leve e atemporal: conjunto de alfaiataria na cor vinho com regata decote V e pantalona de cintura marcada com cordão, finalizado com bolsa baguete estampada em monograma com detalhe dourado e rasteirinha em tom caramelo.',
+      tags: ['Alfaiataria', 'Monograma', 'Rasteirinha'],
       highlights: [
-        'Scarpins clássicos e modernos para eventos, formaturas e jantares',
-        'Variedade de sapatilhas, cintos e brincos para finalizar o look',
-        'Atendimento personalizado para ajudar na escolha ideal',
+        'Conjunto pantalona com corte fluido que alonga a silhueta',
+        'Bolsa baguete estruturada em monograma com ferragem dourada',
+        'Rasteirinha caramelo versátil para dias quentes e passeios',
       ],
     },
     {
-      id: 'bolsa-lenco-nichos',
-      title: 'Bolsa Estruturada & Acessórios',
-      image: 'assets/images/produtos_5.jpg',
-      alt: 'Bolsa vermelha estruturada com lenço estampado, pulseiras e calçados femininos nos nichos rosa da Nô Linda',
-      categories: ['bolsas', 'acessorios', 'calcados'],
+      id: 'tons-terrosos-tote-couro-tenis-nude',
+      title: 'Tons Terrosos, Bolsa Tote & Tênis Nude',
+      image: 'assets/images/look_5.jpg',
+      alt: 'Blusa estampada folhagens amarela, calça marrom confortável, bolsa tote em couro café e tênis casual nude',
+      categories: ['roupas', 'bolsas', 'calcados'],
       shortDescription:
-        'Bolsa feminina em vermelho vibrante com lenço delicado, acompanhada de pulseiras e calçados femininos.',
+        'Blusa estampada folhagens, calça marrom confortável, bolsa tote em couro café e tênis casual nude.',
       fullDescription:
-        'A peça-chave que transforma o visual: bolsa estruturada em tom vermelho coral com alça dupla, fivela dourada e lenço decorativo, exposta junto a pulseiras metalizadas e calçados femininos em verniz e salto bloco.',
-      tags: ['Bolsa Estruturada', 'Lenços', 'Pulseiras'],
+        'Paleta natural que nunca sai de moda: blusa leve amarela com estampa botânica marrom, calça reta marrom de cintura elástica, bolsa tote estruturada em couro café com pespontos contrastantes e tênis casual nude ultraconfortável.',
+      tags: ['Tons Terrosos', 'Bolsa Tote', 'Tênis Nude'],
       highlights: [
-        'Alça de mão e alça tiracolo removível para maior praticidade',
-        'Detalhes metálicos dourados e acabamento refinado',
-        'Diversas opções de bijuterias e carteiras na loja',
+        'Bolsa tote espaçosa em couro marrom café com ótimo acabamento',
+        'Calça e blusa leves ideais para trabalho e passeios',
+        'Tênis casual em tom nude que combina com tudo',
       ],
     },
     {
-      id: 'prateleira-bolsas-tenis-sandalias',
-      title: 'Bolsas, Tênis Casuais & Sandálias',
-      image: 'assets/images/produtos_6.jpg',
-      alt: 'Prateleiras iluminadas com bolsas caramelo, bege vazado e preta, além de tênis casuais, slip-ons e sandálias',
-      categories: ['bolsas', 'calcados'],
+      id: 'vermelho-preto-baguete-verniz',
+      title: 'Look Vermelho & Preto com Baguete Verniz',
+      image: 'assets/images/look_6.jpg',
+      alt: 'Blusa vermelha ombro único com laço, saia preta com cinto, bolsa baguete marrom envernizada e tamanco mule preto',
+      categories: ['roupas', 'bolsas', 'calcados'],
       shortDescription:
-        'Bolsas em tons caramelo, creme recortado a laser e preto, combinadas com tênis slip-on, plataformas e sandálias.',
+        'Blusa vermelha ombro único com laço, saia preta com cinto, bolsa baguete marrom envernizada e tamanco mule preto.',
       fullDescription:
-        'Nossa parede iluminada reúne o melhor da moda casual-chique: bolsas em caramelo com barbicacho, modelo bege com recorte a laser e bolsa preta estruturada, além de tênis brancos, metalizados, mules e sandálias variadas.',
-      tags: ['Tênis & Slip-on', 'Sandálias', 'Bolsas Dia a Dia'],
+        'Visual marcante do happy hour ao jantar: blusa vermelha vibrante de um ombro só com detalhe de laço, saia preta estruturada com cinto fino de fivela, bolsa baguete compacta em acabamento verniz marrom e tamanco mule preto minimalista.',
+      tags: ['Baguete Verniz', 'Mule Preto', 'Ombro Único'],
       highlights: [
-        'Bolsas amplas e médias em cores neutras e atemporais',
-        'Tênis casuais, mules e sandálias leves para todas as estações',
-        'Múltiplos estilos em um só lugar no Centro de Taquara',
+        'Bolsa baguete em verniz brilhoso com alça de ombro elegante',
+        'Tamanco mule preto prático, moderno e confortável',
+        'Peças versáteis fáceis de combinar juntas ou separadas',
       ],
     },
     {
-      id: 'colecao-botas-cano-alto',
-      title: 'Botas Montaria & Cano Alto',
-      image: 'assets/images/produtos_7.jpg',
-      alt: 'Botas femininas de cano alto em marrom e preto com fivelas douradas e modelos de cano curto com franjas e animal print',
-      categories: ['botas'],
+      id: 'all-jeans-bordado-tote-preta',
+      title: 'All Jeans Bordado, Tote Preta & Peep-Toe',
+      image: 'assets/images/look_7.jpg',
+      alt: 'Colete jeans com bordado floral, calça jeans wide leg, bolsa tote preta estruturada e calçado peep-toe preto',
+      categories: ['roupas', 'bolsas', 'calcados'],
       shortDescription:
-        'Botas de cano alto com fivelas douradas e modelos curtos em animal print, camurça e franjas.',
+        'Colete jeans com bordado floral delicado, calça wide leg, bolsa tote preta estruturada e calçado peep-toe preto.',
       fullDescription:
-        'Um verdadeiro destaque para os dias mais frios: botas montaria e cano alto em preto e café com fivelas delicadas, ao lado de ankle boots em animal print, camurça com franjas e modelos clássicos com salto baixo.',
-      tags: ['Montaria', 'Cano Alto', 'Animal Print'],
+        'Estilo contemporâneo com toque artesanal: colete jeans alongado com bordados florais frontais, calça jeans wide leg de lavagem clara, blusa pink vibrante, bolsa tote preta espaçosa para a rotina e sandália peep-toe preta de salto.',
+      tags: ['All Jeans', 'Bolsa Tote Preta', 'Peep-Toe'],
       highlights: [
-        'Botas cano alto estruturadas em preto e tons terrosos',
-        'Ankle boots com franjas, fivelas e estampa snake',
-        'Opções de salto baixo e médio para máximo conforto',
+        'Colete jeans diferenciado com detalhes florais bordados',
+        'Bolsa tote preta estruturada ideal para levar tudo o que precisa',
+        'Calçado peep-toe preto elegante que valoriza produções com jeans',
+      ],
+    },
+    {
+      id: 'jaqueta-bomber-risca-de-giz',
+      title: 'Jaqueta Bomber Risca de Giz & Acessórios',
+      image: 'assets/images/look_8.jpg',
+      alt: 'Jaqueta bomber off-white risca de giz com zíper frontal, argolas douradas, colar escuro e bolsa com lenço',
+      categories: ['roupas', 'acessorios', 'bolsas'],
+      shortDescription:
+        'Jaqueta bomber off-white risca de giz com zíper frontal, combinada com argolas douradas, colar de contas e bolsa com lenço.',
+      fullDescription:
+        'Peça curinga para elevar produções casuais: jaqueta bomber off-white com padronagem risca de giz, gola clássica, bolsos frontais e zíper contrastante, acompanhada de argolas douradas, colar escuro e bolsa com detalhe de lenço na alça.',
+      tags: ['Jaqueta Bomber', 'Risca de Giz', 'Bijuterias'],
+      highlights: [
+        'Jaqueta bomber estruturada com caimento impecável',
+        'Padronagem risca de giz clássica fácil de combinar',
+        'Acessórios dourados e bolsa com lenço disponíveis na loja',
+      ],
+    },
+    {
+      id: 'colar-perolas-brincos-dourados',
+      title: 'Colar de Pérolas & Brincos Dourados',
+      image: 'assets/images/look_9.jpg',
+      alt: 'Detalhe de colar duplo de pérolas, brinco dourado martelado com pedra âmbar e anel dourado sobre colete de alfaiataria',
+      categories: ['acessorios'],
+      shortDescription:
+        'Mix sofisticado de acessórios com colar duplo de pérolas, brinco dourado martelado com pedra âmbar e anel dourado.',
+      fullDescription:
+        'Os detalhes que fazem toda a diferença: colar duplo de pérolas com destaque central, brinco dourado texturizado com pedra em tom âmbar e anel vazado dourado, combinados com alfaiataria em tom fendi atemporal.',
+      tags: ['Pérolas', 'Brincos Dourados', 'Semijoias'],
+      highlights: [
+        'Curadoria de semijoias e bijuterias com acabamento marcante',
+        'Colar de pérolas e brincos statement para iluminar o rosto',
+        'Combinação perfeita para produções de alfaiataria e eventos',
       ],
     },
   ];
@@ -476,7 +510,7 @@
         card.style.animationDelay = `${index * 60}ms`;
         card.innerHTML = `
           <div class="product-media" data-open-modal="${item.id}" role="button" tabindex="0" aria-label="Ampliar detalhes de ${item.title}">
-            <img src="${item.image}" alt="${item.alt}" loading="lazy" width="1400" height="787" />
+            <img src="${item.image}" alt="${item.alt}" loading="lazy" width="1050" height="1400" />
             <div class="product-badges">${badgesHtml}</div>
             <span class="product-zoom-hint" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

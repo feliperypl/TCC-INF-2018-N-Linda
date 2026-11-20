@@ -5,7 +5,7 @@ Recriação modernizada do projeto de TCC (2018) originalmente publicado em [TCC
 ## Principais melhorias em relação à versão de 2018
 
 - **100% responsivo**: menu mobile em drawer, grid fluido para celulares, tablets e desktops (na versão original, a barra de navegação e o formulário de contato ficavam ocultos abaixo de 1280px).
-- **Vitrine interativa de produtos**: filtros por categoria (`Todos`, `Botas`, `Calçados`, `Bolsas`, `Acessórios`), modal/lightbox com navegação por teclado e consulta direta no WhatsApp por coleção.
+- **Vitrine interativa de produtos**: filtros por categoria (`Todos`, `Roupas`, `Bolsas`, `Calçados`, `Acessórios`), modal/lightbox com navegação por teclado e consulta direta no WhatsApp por coleção.
 - **Carrossel modernizado**: suporte a toque (swipe), pausa ao passar o mouse, legenda dinâmica, contador e indicadores acessíveis (substituindo `document.write` e `setInterval` fixo).
 - **Contato integrado ao WhatsApp**: validação de formulário no front-end, formatação automática da mensagem para `wa.me/5551984319881`, confirmação visual e botões de copiar telefone/endereço.
 - **Performance e otimização de mídia**: imagens reais da loja otimizadas (~18,6 MB → ~933 KB, redução de ~95%) preservando a qualidade visual.
@@ -22,7 +22,7 @@ lojaNoLinda/
 │   │   └── LeviteeDemo.{woff2,woff,ttf}
 │   └── images/
 │       ├── header-bg.jpg
-│       └── produtos_1.jpg ... produtos_7.jpg
+│       └── look_1.jpg ... look_9.jpg
 ├── css/
 │   └── style.css
 └── js/
