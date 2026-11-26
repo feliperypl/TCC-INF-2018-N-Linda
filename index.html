@@ -138,57 +138,43 @@
   <main id="conteudo-principal">
     <!-- Hero Section -->
     <section class="hero" id="inicio">
-      <div class="hero-stage">
-        <div class="hero-banner-wrap">
-          <img
-            src="assets/images/Banner-Hero.webp"
-            alt="Banner Nô Linda Calçados &amp; Bolsas com look jeans bordado, bolsa tote preta estruturada e sandália peep-toe"
-            class="hero-banner-img"
-            width="1920"
-            height="800"
-            fetchpriority="high"
-            decoding="async"
-          />
+      <div class="hero-ambient" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">
+            <svg class="icon-xs" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
+            </svg>
+            Centro de Taquara — RS
+          </span>
 
-          <div class="hero-overlay-content">
-            <h1 class="sr-only">
-              Nô Linda — Calçados, Bolsas e Acessórios no Centro de Taquara - RS
-            </h1>
+          <h1 class="hero-title">
+            Estilo, charme e elegância em cada passo na
+            <span class="hero-brand-accent">Nô Linda</span>
+          </h1>
 
-            <span class="eyebrow hero-eyebrow">
-              <svg class="icon-xs" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
+          <p class="hero-subtitle">
+            Calçados, botas, bolsas, carteiras, roupas e acessórios escolhidos com carinho para
+            acompanhar você do dia a dia às ocasiões especiais.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#vitrine" class="btn btn-primary btn-lg">
+              <span>Explorar Vitrine</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              Centro de Taquara — RS
-            </span>
-
-            <p class="hero-subtitle">
-              Calçados, botas, bolsas, carteiras, roupas e acessórios escolhidos com carinho para
-              acompanhar você do dia a dia às ocasiões especiais.
-            </p>
-
-            <div class="hero-cta">
-              <a href="#vitrine" class="btn btn-primary btn-lg">
-                <span>Explorar Vitrine</span>
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-              <a
-                href="https://wa.me/5551984319881?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20N%C3%B4%20Linda%20e%20gostaria%20de%20conferir%20as%20novidades."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline btn-lg"
-              >
-                <span>Atendimento WhatsApp</span>
-              </a>
-            </div>
+            </a>
+            <a
+              href="https://wa.me/5551984319881?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20N%C3%B4%20Linda%20e%20gostaria%20de%20conferir%20as%20novidades."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline btn-lg"
+            >
+              <span>Atendimento WhatsApp</span>
+            </a>
           </div>
-        </div>
-      </div>
 
-      <div class="hero-highlights-bar">
-        <div class="container">
           <div class="hero-highlights">
             <div class="highlight-item">
               <strong>+ Variedade</strong>
@@ -203,6 +189,190 @@
             <div class="highlight-item">
               <strong>Localização central</strong>
               <span>Rua Pinheiro Machado, 1133</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div
+            class="polaroid-showcase"
+            id="hero-polaroids"
+            aria-roledescription="carousel"
+            aria-label="Looks do Instagram da Nô Linda em polaroides"
+          >
+            <div class="polaroid-stack" id="polaroid-stack">
+              <figure class="polaroid-card" data-slot="0" data-index="0" data-product-id="conjuntos-conforto-bolsas-tenis">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_1.jpg"
+                    alt="Conjuntos confortáveis em caramelo e azul acinzentado com bolsa estruturada branca, mochila nude e tênis na Nô Linda"
+                    width="1050"
+                    height="1400"
+                    fetchpriority="high"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Conjuntos &amp; Tênis</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="hidden" data-index="1" data-product-id="vestido-acetinado-scarpin-matelasse">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_2.jpg"
+                    alt="Vestido midi acetinado champanhe com bolsa branca matelassê de corrente dourada e scarpin slingback tricolor"
+                    width="1050"
+                    height="1400"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Vestido Acetinado</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="hidden" data-index="2" data-product-id="looks-urbanos-bolsas-destaque">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_3.jpg"
+                    alt="Produções urbanas com bolsa hobo marrom, jeans e bolsa matelassê vermelha"
+                    width="1050"
+                    height="1393"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Looks Urbanos</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="hidden" data-index="3" data-product-id="alfaiataria-vinho-baguete-monograma">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_4.jpg"
+                    alt="Conjunto monocromático em alfaiataria vinho com bolsa baguete monograma e rasteirinha caramelo"
+                    width="1050"
+                    height="1400"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Alfaiataria Vinho</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="hidden" data-index="4" data-product-id="tons-terrosos-tote-couro-tenis-nude">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_5.jpg"
+                    alt="Blusa estampada folhagens amarela, calça marrom confortável, bolsa tote em couro café e tênis casual nude"
+                    width="1050"
+                    height="1400"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Tons Terrosos</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="hidden" data-index="5" data-product-id="vermelho-preto-baguete-verniz">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_6.jpg"
+                    alt="Blusa vermelha ombro único, saia preta, bolsa baguete verniz marrom e tamanco mule preto"
+                    width="1050"
+                    height="1393"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Baguete Verniz</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="3" data-index="6" data-product-id="all-jeans-bordado-tote-preta">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_7.jpg"
+                    alt="Colete jeans com bordado floral, calça wide leg, bolsa tote preta estruturada e sandália peep-toe"
+                    width="1050"
+                    height="1400"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">All Jeans Bordado</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="2" data-index="7" data-product-id="jaqueta-bomber-risca-de-giz">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_8.jpg"
+                    alt="Jaqueta bomber off-white risca de giz com argolas douradas e bolsa com lenço"
+                    width="1050"
+                    height="1400"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Jaqueta Bomber</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+
+              <figure class="polaroid-card" data-slot="1" data-index="8" data-product-id="colar-perolas-brincos-dourados">
+                <div class="polaroid-frame">
+                  <img
+                    src="assets/images/look_9.jpg"
+                    alt="Colar duplo de pérolas, brinco dourado martelado com pedra âmbar e anel dourado"
+                    width="1050"
+                    height="1400"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="polaroid-caption">
+                  <span class="polaroid-title">Pérolas &amp; Dourado</span>
+                  <span class="polaroid-tag">@noeliarypl_nolinda</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="polaroid-controls">
+              <span class="polaroid-counter" id="polaroid-counter" aria-live="polite">01 / 09</span>
+              <div class="polaroid-progress" aria-hidden="true">
+                <span class="polaroid-progress-fill" id="polaroid-progress-fill"></span>
+              </div>
+              <div class="polaroid-nav">
+                <button
+                  type="button"
+                  class="polaroid-nav-btn"
+                  id="polaroid-prev"
+                  aria-label="Foto anterior"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="polaroid-nav-btn"
+                  id="polaroid-next"
+                  aria-label="Próxima foto"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>

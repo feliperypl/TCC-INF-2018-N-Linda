@@ -780,6 +780,167 @@
   }
 
   /* ========================================================================
+     Hero Overlapping Polaroid Carousel
+     ======================================================================== */
+
+  function initHeroPolaroids() {
+    const showcase = document.getElementById('hero-polaroids');
+    const stack = document.getElementById('polaroid-stack');
+    const counter = document.getElementById('polaroid-counter');
+    const progressFill = document.getElementById('polaroid-progress-fill');
+    const prevBtn = document.getElementById('polaroid-prev');
+    const nextBtn = document.getElementById('polaroid-next');
+
+    if (!showcase || !stack) return;
+
+    const cards = Array.from(stack.querySelectorAll('.polaroid-card'));
+    const total = cards.length;
+    if (total < 2) return;
+
+    const INTERVAL_MS = 3600;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let current = 0;
+    let timerId = null;
+    let isPaused = false;
+    let touchStartX = 0;
+
+    function formatNum(n) {
+      return String(n).padStart(2, '0');
+    }
+
+    function restartProgress() {
+      if (!progressFill || prefersReducedMotion) return;
+      progressFill.classList.remove('is-running');
+      void progressFill.offsetWidth;
+      progressFill.classList.add('is-running');
+    }
+
+    function updateSlots(animateIncoming = false) {
+      cards.forEach((card, idx) => {
+        // Distance behind the active card so each new card overlaps on top of previous ones
+        const behind = (current - idx + total) % total;
+
+        card.classList.remove('is-entering');
+
+        if (behind === 0) {
+          card.setAttribute('data-slot', '0');
+          card.setAttribute('aria-hidden', 'false');
+          if (animateIncoming && !prefersReducedMotion) {
+            void card.offsetWidth;
+            card.classList.add('is-entering');
+          }
+        } else if (behind <= 3) {
+          card.setAttribute('data-slot', String(behind));
+          card.setAttribute('aria-hidden', 'true');
+        } else {
+          card.setAttribute('data-slot', 'hidden');
+          card.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      if (counter) {
+        counter.textContent = `${formatNum(current + 1)} / ${formatNum(total)}`;
+      }
+    }
+
+    function stopAutoplay() {
+      if (timerId) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (prefersReducedMotion || isPaused) return;
+      restartProgress();
+      timerId = setInterval(() => {
+        goTo(current + 1, true);
+      }, INTERVAL_MS);
+    }
+
+    function goTo(targetIndex, fromAutoplay = false) {
+      current = ((targetIndex % total) + total) % total;
+      updateSlots(true);
+      if (fromAutoplay) {
+        restartProgress();
+      } else {
+        startAutoplay();
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => goTo(current - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => goTo(current + 1));
+    }
+
+    // Click on stack brings the next Polaroid overlapping on top
+    stack.addEventListener('click', () => goTo(current + 1));
+
+    // Pause cleanly on hover or keyboard focus
+    showcase.addEventListener('mouseenter', () => {
+      isPaused = true;
+      showcase.classList.add('is-paused');
+      stopAutoplay();
+    });
+
+    showcase.addEventListener('mouseleave', () => {
+      isPaused = false;
+      showcase.classList.remove('is-paused');
+      startAutoplay();
+    });
+
+    showcase.addEventListener('focusin', () => {
+      isPaused = true;
+      showcase.classList.add('is-paused');
+      stopAutoplay();
+    });
+
+    showcase.addEventListener('focusout', (e) => {
+      if (showcase.contains(e.relatedTarget)) return;
+      isPaused = false;
+      showcase.classList.remove('is-paused');
+      startAutoplay();
+    });
+
+    // Touch swipe support on mobile
+    stack.addEventListener(
+      'touchstart',
+      (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+      },
+      { passive: true }
+    );
+
+    stack.addEventListener(
+      'touchend',
+      (e) => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) {
+          goTo(dx < 0 ? current + 1 : current - 1);
+        }
+      },
+      { passive: true }
+    );
+
+    // Pause when tab is hidden to keep timer & progress bar synced
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopAutoplay();
+      } else if (!isPaused) {
+        startAutoplay();
+      }
+    });
+
+    // Initial render: show look_1 on top with look_9, look_8, look_7 fanned behind it
+    updateSlots(false);
+    startAutoplay();
+  }
+
+  /* ========================================================================
      Bootstrap
      ======================================================================== */
 
@@ -789,6 +950,7 @@
 
     initHeaderAndScroll();
     initMobileDrawer();
+    initHeroPolaroids();
     const { openModalById } = initVitrineAndModal();
     initCarousel(openModalById);
     initContactFormAndCopy();
